@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NPC Generator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+  </head>
+  <body>
+<div class="container">
+
+    <div class="container-cards">
+        <div class="section category">
+            <div class="byCategory">
+                <h2>Contents by Category</h2>
+                <form action="" method="get">
+                    <p>Specify how many items of each type this shop should hold:</p>
+                    <h3>Magic Items</h3>
+                    <input type="number" class="numberInput" id="magicItems" name="magicItems" min="0" max="5">
+                    <h3>Weapons</h3>
+                    <input type="number" class="numberInput" id="weapons" name="weapons" min="0" max="5">
+                    <h3>Armor</h3>
+                    <input type="number" class="numberInput" id="armor" name="armor" min="0" max="5">
+                    <h3>Miscellaneous Items</h3>
+                    <input type="number" class="numberInput" id="miscItems" name="miscItems" min="0" max="5"><br>
+                    <button type="submit" name="submit" id="submitByCategory" class="submitCategory">Get my shop!</button>
+                </form>
+            </div>
+            <section class="shopDetail">
+
+<h3>Miscellaneous Items</h3>
+
+<?php (!empty($newmisc)) {
+foreach ($newmisc as $newmisc){
+echo $newmisc;}}
+?>
+</section>
+        </div>
+</div></div>
+</body>
+<script type="module" src="main.js"></script>
+</html>
