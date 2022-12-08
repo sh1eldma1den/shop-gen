@@ -348,7 +348,7 @@ function getMagic() {
 function renderMagic(item){
 	const mOutputUl = document.getElementById('mOutputUl');
 	const li_obj = document.createElement('li');
-	li_obj.innerHTML = item;
+	li_obj.appendChild(document.createTextNode(item));
 	mOutputUl.appendChild(li_obj);
 }
 
