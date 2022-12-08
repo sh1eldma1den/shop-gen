@@ -389,7 +389,7 @@ function renderArmor(item){
 
 
 function getMisc() {
-	const numMisc = document.getElementById('miscInput');
+	const numMisc = document.getElementById('miscItems');
 	if (numMisc.value !== 0) {
 		for (let i=0; i < numMisc.value; i++){
 			const confirmedMisc = miscItems[Math.floor(Math.random() * miscItems.length)];
