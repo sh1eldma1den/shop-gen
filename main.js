@@ -410,3 +410,16 @@ document.querySelector(".submitWeapons").addEventListener("click", getWeapons);
 
 document.querySelector(".submitArmor").addEventListener("click", getArmor);
 document.querySelector(".submitMisc").addEventListener("click", getMisc);
+
+function clearMagic(){
+	document.getElementById("magicOutput").innerHTML = "";
+  }
+  function clearWeapons(){
+	document.getElementById("weaponOutput").innerHTML = "";
+  }
+  function clearArmor(){
+	document.getElementById("armorOutput").innerHTML = "";
+  }
+  function clearMisc(){
+	document.getElementById("miscOutput").innerHTML = "";
+  }
