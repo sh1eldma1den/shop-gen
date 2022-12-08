@@ -405,8 +405,8 @@ function renderMisc(item){
 	outputDivMi.appendChild(span_obj);
 }
 
-document.querySelector(".submitMagic").addEventListener("click", getMagic());
-document.querySelector(".submitWeapons").addEventListener("click", getWeapons());
+document.querySelector(".submitMagic").addEventListener("click", getMagic);
+document.querySelector(".submitWeapons").addEventListener("click", getWeapons);
 
-document.querySelector(".submitArmor").addEventListener("click", getArmor());
-document.querySelector(".submitMisc").addEventListener("click", getMisc());
+document.querySelector(".submitArmor").addEventListener("click", getArmor);
+document.querySelector(".submitMisc").addEventListener("click", getMisc);
