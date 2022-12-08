@@ -270,8 +270,7 @@ const weapons = [
 			 "Hand Crossbow",
 			 "Heavy Crossbow",
 			 "Longbow",
-			 "Net",		
-];
+			 "Net",];
 
 const armor = [
 		"Padded armor",
@@ -332,69 +331,82 @@ const miscItems = [
     "A silver spoon with the letter X engraved on the handle",
     "A camp shovel",];
 
-const numMagic = document.getElementbyId('mItems');
-const numWeapons = document.getElementbyId('weaponInput');
-const numArmor = document.getElementById('armorInput');
-const numMisc = document.getElementById('miscItems');
 
 
-function getMagicItems(numMagic, magicItems) {
-	if (numMagic > 1) {
-		for (let i=0; i <= numMagic; i++){
-			confirmedMagicItem = magicItems[Math.floor(Math.random() * magicItems.length)];
-			return confirmedMagicItem;
-	} elseif (numMagic == 1)
-			confirmedMagicItem = magicItems[Math.floor(Math.random() * magicItems.length)];
-			return confirmedMagicItem;
-	}
+
+function getMagic() {
+	const numMagic = document.getElementById('mItems').value;
+	if (numMagic !== 0) {
+		for (let i=0; i < numMagic; i++){
+			const confirmedMagic = magicItems[Math.floor(Math.random() * magicItems.length)];
+			renderMagic(confirmedMagic);
+		console.log(confirmedMagic);}
+		} else if (numMagic == 0){
+			// Do nothing, dummy.
+		} 
 }
-function setMagicItems (confirmedMagicItem){
-  document.getElementById("weaponOutput").innerText = getMagicItems();
-}
-function getWeapons(numWeapons, weapons) {
-	if (numWeapons > 1) {
-		for (let i=0; i <= numWeapons; i++){
-			confirmedWeapon = weapons[Math.floor(Math.random() * weapons.length)];
-			return confirmedWeapon;
-	} elseif (numWeapons == 1)
-		confirmedWeapon = weapons[Math.floor(Math.random() * weapons.length)];
-		return confirmedWeapon;
-	}
-}
-function setWeapons (){
-  document.getElementById("weaponOutput").innerText = getWeapons();
+function renderMagic(item){
+	const outputDivM = document.getElementById('magicOutput');
+	const span_obj = document.createElement('span');
+	span_obj.innerHTML = item;
+	outputDivM.appendChild(span_obj);
 }
 
-function getArmor(numArmor, armor) {
-	if (numArmor > 1) {
-		for (let i=0; i <= numArmor; i++){
-			confirmedArmor = armor[Math.floor(Math.random() * armor.length)];
-			return confirmedArmor;
-	} elseif (numArmor == 1)
-			confirmedArmor = armor[Math.floor(Math.random() * armor.length)];
-		return confirmedArmor;
-	}
+function getWeapons() {
+	const numWeapons = document.getElementById('weaponInput');
+	if (numWeapons.value !== 0) {
+		for (let i=0; i < numWeapons.value; i++){
+			const confirmedWeapon = weapons[Math.floor(Math.random() * weapons.length)];
+			renderWeapons(confirmedWeapon);}
+		} else if (numWeapons.value == 0){
+			// Do nothing, dummy.
+		} 
 }
-function setArmor (){
-  document.getElementById("armorOutput").innerText = getArmor();
+function renderWeapons(item){
+	const outputDivW = document.getElementById('weaponOutput');
+	const span_obj = document.createElement('span');
+	span_obj.innerHTML = item;
+	outputDivW.appendChild(span_obj);
 }
-function getMisc(numMisc, miscItems) {
-	if (numMisc > 1) {
-		for (let i=0; i <= numMisc; i++){
-			confirmedMisc = miscItems[Math.floor(Math.random() * miscItems.length)];
-			return confirmedMisc;
-	} elseif (numMisc == 1)
-			confirmedMisc = miscItems[Math.floor(Math.random() * miscItems.length)];
-		return confirmedMisc;
-	}
+
+function getArmor() {
+	const numArmor = document.getElementById('armorInput');
+	if (numArmor.value !== 0) {
+		for (let i=0; i < numArmor.value; i++){
+			const confirmedArmor = armor[Math.floor(Math.random() * armor.length)];
+			renderArmor(confirmedArmor);}
+		} else if (numArmor.value == 0){
+			// Do nothing, dummy.
+		} 
 }
-function setMisc (){
-  document.getElementById("miscOutput").innerText = getMisc();
+function renderArmor(item){
+	const outputDivA = document.getElementById('armorOutput');
+	const span_obj = document.createElement('span');
+	span_obj.innerHTML = item;
+	outputDivA.appendChild(span_obj);
 }
 
 
-document.querySelector(".submitMagic").addEventListener("click", setMagicItems());
+
+function getMisc() {
+	const numMisc = document.getElementById('miscInput');
+	if (numMisc.value !== 0) {
+		for (let i=0; i < numMisc.value; i++){
+			const confirmedMisc = miscItems[Math.floor(Math.random() * miscItems.length)];
+			renderMisc(confirmedMisc);}
+		} else if (numMisc.value == 0){
+			// Do nothing, dummy.
+		} 
+}
+function renderMisc(item){
+	const outputDivMi = document.getElementById('miscOutput');
+	const span_obj = document.createElement('span');
+	span_obj.innerHTML = item;
+	outputDivMi.appendChild(span_obj);
+}
+
+document.querySelector(".submitMagic").addEventListener("click", getMagic());
 document.querySelector(".submitWeapons").addEventListener("click", getWeapons());
 
-document.querySelector(".submitArmor").addEventListener("click", setArmor());
-document.querySelector(".submitMisc").addEventListener("click", setMisc());
+document.querySelector(".submitArmor").addEventListener("click", getArmor());
+document.querySelector(".submitMisc").addEventListener("click", getMisc());

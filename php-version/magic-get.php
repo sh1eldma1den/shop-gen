@@ -1,3 +1,4 @@
+<?php
 $magicItems = 
 	array ("Adamantine Armor",
 	"Amulet of Health",
@@ -13,7 +14,7 @@ $magicItems =
 	"Bag of Beans",
 	"Bag of Devouring",
 	"Bag of Holding",
-	"Bag of Tricks,"
+	"Bag of Tricks",
 	"Bead of Force",
 	"Belt of Dwarvenkind",
 	"Belt of Giant Strength",
@@ -241,3 +242,4 @@ if (isset($_GET['mItems']) && $_GET['mItems'] != '') {
 			echo $item;
 	}
 }
+?>

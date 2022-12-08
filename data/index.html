@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NPC Generator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="container-cards">
+          <div class="section category">
+              <div class="byCategory">
+                  <h2>Contents by Category</h2>
+                  <div>
+                      <p>Specify how many items of each type this shop should hold:</p>
+                      <h3>Magic Items</h3>
+                      <input type="number" class="numberInput" id="mItems" name="mItems" min="0" max="5"><button type="submit" name="submit" id="submitMagic" class="submitMagic">Get Some Magic Items</button>
+
+                      <h3>Weapons</h3>
+                      <input type="number" class="numberInput" id="weaponInput" name="weaponInput" min="0" max="5"><button type="submit" name="submit" id="submitWeapons" class="submitWeapons">Get Some Weapons</button>
+                      <h3>Armor</h3>
+                      <input type="number" class="numberInput" id="armorInput" name="armorInput" min="0" max="5"><button type="submit" name="submit" id="submitArmor" class="submitArmor">Get Some Armor</button>
+                      <h3>Miscellaneous Items</h3>
+                      <input type="number" class="numberInput" id="miscItems" name="miscItems" min="0" max="5"><button type="submit" name="submit" id="submitMisc" class="submitMisc">Get Some Odd Items</button>
+                     
+                  </div>
+              </div>
+         
+          </div>
+<div class="container-cards">
+<div class="section category">
+              
+<section class="shopDetail">
+<h2>Shop Contents</h2>
+<h3>Magic Items</h3>
+
+<div id="magicOutput"></div>
+<h3>Weapons</h3>
+<div id="weaponOutput"></div>
+
+<h3>Armor</h3>
+
+<div id="armorOutput"></div>
+<h3>Miscellaneous Items</h3>
+
+<div id="miscOutput"></div>
+</section>
+          </div>
+  </div></div>    </div>
+      <div class="copyright">
+        Copyright © 2022 Megan T. Moore | 
+        <a href="https://github.com/sh1eldma1den">sh1eldma1den</a>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="main.js"></script>
+</html>
