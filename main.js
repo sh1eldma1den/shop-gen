@@ -346,10 +346,10 @@ function getMagic() {
 		} 
 }
 function renderMagic(item){
-	const outputDivM = document.getElementById('magicOutput');
-	const span_obj = document.createElement('span');
-	span_obj.innerHTML = item;
-	outputDivM.appendChild(span_obj);
+	const mOutputUl = document.getElementById('mOutputUl');
+	const li_obj = document.createElement('li');
+	li_obj.innerHTML = item;
+	mOutputUl.appendChild(li_obj);
 }
 
 function getWeapons() {
@@ -363,10 +363,10 @@ function getWeapons() {
 		} 
 }
 function renderWeapons(item){
-	const outputDivW = document.getElementById('weaponOutput');
-	const span_obj = document.createElement('span');
-	span_obj.innerHTML = item;
-	outputDivW.appendChild(span_obj);
+	const wOutputUl = document.getElementById('wOutputUl');
+	const li_obj = document.createElement('li');
+	li_obj.innerHTML = item;
+	wOutputUl.appendChild(li_obj);
 }
 
 function getArmor() {
@@ -380,10 +380,10 @@ function getArmor() {
 		} 
 }
 function renderArmor(item){
-	const outputDivA = document.getElementById('armorOutput');
-	const span_obj = document.createElement('span');
-	span_obj.innerHTML = item;
-	outputDivA.appendChild(span_obj);
+	const aOutputUl = document.getElementById('aOutputUl');
+	const li_obj = document.createElement('li');
+	li_obj.innerHTML = item;
+	aOutputUl.appendChild(li_obj);
 }
 
 
@@ -399,10 +399,10 @@ function getMisc() {
 		} 
 }
 function renderMisc(item){
-	const outputDivMi = document.getElementById('miscOutput');
-	const span_obj = document.createElement('span');
-	span_obj.innerHTML = item;
-	outputDivMi.appendChild(span_obj);
+	const miOutputUl = document.getElementById('miOutputUl');
+	const li_obj = document.createElement('li');
+	li_obj.innerHTML = item;
+	mOutputUl.appendChild(li_obj);
 }
 
 document.querySelector(".submitMagic").addEventListener("click", getMagic);
