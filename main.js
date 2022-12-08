@@ -402,7 +402,7 @@ function renderMisc(item){
 	const miOutputUl = document.getElementById('miOutputUl');
 	const li_obj = document.createElement('li');
 	li_obj.innerHTML = item;
-	mOutputUl.appendChild(li_obj);
+	miOutputUl.appendChild(li_obj);
 }
 
 document.querySelector(".submitMagic").addEventListener("click", getMagic);
