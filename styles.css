@@ -81,7 +81,7 @@ h3 {
 }
 
 /* button all */
-button .btn {
+button.btn {
   border: 0;
   border-radius: 5px;
   background: linear-gradient(to right, #eb5e28, #f0433d);
@@ -93,7 +93,7 @@ button .btn {
   margin: .5rem;
 }
 
-button .btn:hover {
+button.btn:hover {
   background: linear-gradient(to right, #db5520, #df4a30);
 }
 
@@ -108,7 +108,7 @@ span {
   font-weight: 100;
 }
 
-input .numberInput {
+input.numberInput {
   background-color: #252422;
   text-align: center;
   color: #ebebeb;
