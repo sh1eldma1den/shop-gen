@@ -89,6 +89,7 @@ button.btn {
   transition-duration: 0.5s;
   cursor: pointer;
   padding: 0.5em;
+  justify-self: center;
 }
 
 button.btn:hover {
@@ -106,7 +107,12 @@ span {
   font-weight: 100;
 }
 
-
+input .numberInput {
+  background-color: #252422;
+  text-align: center;
+  color: #ebebeb;
+  max-width: fit-content;
+}
 
 div .output {
   display: flex;
