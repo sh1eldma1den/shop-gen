@@ -346,10 +346,11 @@ function getMagic() {
 		} 
 }
 function renderMagic(item){
-	const mOutputUl = document.getElementById('mOutputUl');
-	const li_obj = document.createElement('li');
-	li_obj.appendChild(document.createTextNode(item));
-	mOutputUl.appendChild(li_obj);
+	const output = document.getElementById('magicOutput');
+	const span_obj = document.createElement('span');
+	span_obj.classList.add('output_span');
+	span_obj.innerHTML =  item;
+	output.appendChild(span_obj);
 }
 
 function getWeapons() {
@@ -363,10 +364,11 @@ function getWeapons() {
 		} 
 }
 function renderWeapons(item){
-	const wOutputUl = document.getElementById('wOutputUl');
-	const li_obj = document.createElement('li');
-	li_obj.innerHTML = item;
-	wOutputUl.appendChild(li_obj);
+	const output = document.getElementById('weaponOutput');
+	const span_obj = document.createElement('span');
+	span_obj.classList.add('output_span');
+	span_obj.innerHTML =  item;
+	output.appendChild(span_obj);
 }
 
 function getArmor() {
@@ -380,10 +382,11 @@ function getArmor() {
 		} 
 }
 function renderArmor(item){
-	const aOutputUl = document.getElementById('aOutputUl');
-	const li_obj = document.createElement('li');
-	li_obj.innerHTML = item;
-	aOutputUl.appendChild(li_obj);
+	const output = document.getElementById('armorOutput');
+	const span_obj = document.createElement('span');
+	span_obj.classList.add('output_span');
+	span_obj.innerHTML =  item;
+	output.appendChild(span_obj);
 }
 
 
@@ -399,10 +402,11 @@ function getMisc() {
 		} 
 }
 function renderMisc(item){
-	const miOutputUl = document.getElementById('miOutputUl');
-	const li_obj = document.createElement('li');
-	li_obj.innerHTML = item;
-	miOutputUl.appendChild(li_obj);
+	const output = document.getElementById('miscOutput');
+	const span_obj = document.createElement('span');
+	span_obj.classList.add('output_span');
+	span_obj.innerHTML =  item;
+	output.appendChild(span_obj);
 }
 
 document.querySelector(".submitMagic").addEventListener("click", getMagic);
